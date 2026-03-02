@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-purple: #1A237E; 
+  --color-brand-gold: #F9B824;
+  --color-brand-accent: #F9F6F1;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply bg-brand-accent text-brand-purple font-sans;
+  }
+}
+
+.nav-transparent { @apply bg-transparent border-transparent py-6 text-white; }
+.nav-scrolled { @apply bg-white/90 backdrop-blur-md py-3 shadow-lg border-b border-brand-gold text-black; }
+.nav-scrolled .nav-link { @apply text-black; }
+
+.nav-link { @apply relative pb-1; }
+.nav-link::after {
+  content: '';
+  @apply absolute left-0 bottom-0 w-0 h-0.5 bg-brand-gold transition-all duration-300;
+}
+.nav-link-active::after { @apply w-full; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo-large { height: 80px; width: auto; }
+.logo-small { height: 55px; width: auto; }
+
+.nav-transparent #nav-logo, #footer-logo {
+  filter: drop-shadow(0px 2px 3px rgb(252, 252, 252));
+}
+
+.nav-scrolled #nav-logo {
+  filter: none;
+}

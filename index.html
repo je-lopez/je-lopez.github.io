@@ -36,179 +36,309 @@
 
   <section id="services" class="py-20 bg-white reveal">
     <div class="container mx-auto px-6">
-      <h3 class="text-4xl font-serif text-center mb-16">Our Services</h3>
+      <h3 class="text-4xl font-serif text-center mb-20 text-brand-purple">Our Services</h3>
       
-      <div class="grid lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
-        <div class="p-8 rounded-2xl bg-brand-accent/30 border border-brand-gold/10 hover:shadow-md transition-shadow">
-          <div class="flex items-center gap-4 mb-6">
-            <i data-lucide="calendar" class="text-brand-gold w-10 h-10"></i>
-            <h4 class="font-bold uppercase tracking-widest text-lg">Initial Cleaning</h4>
+      <div class="max-w-6xl mx-auto space-y-16">
+        
+        <div class="service-row group flex flex-col md:flex-row bg-brand-accent/30 rounded-3xl overflow-hidden border border-brand-gold/10 cursor-pointer transition-all duration-700 min-h-[500px]">
+          <div class="service-img-col md:w-1/2 h-80 overflow-hidden transition-all duration-700">
+            <img src="/cleaner-one.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Initial Clean">
           </div>
-          <ul class="space-y-4 text-gray-600 text-sm leading-relaxed">
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Detailed dusting of all surfaces</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Kitchen appliance exterior detailing</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Sanitization of all high-touch points</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Vacuuming & microfiber mopping</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Mirror & glass polishing</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Trash removal & liner replacement</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Bathroom scrubbing & disinfection</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> General tidying & bed making</li>
-          </ul>
+          <div class="service-text-col md:w-1/2 p-12 flex flex-col transition-all duration-700">
+            <div class="flex flex-row items-center gap-4 mb-6">
+              <i data-lucide="calendar" class="text-brand-gold w-10 h-10"></i>
+              <h4 class="font-bold uppercase tracking-widest text-xl md:text-2xl text-brand-purple">Initial Cleaning</h4>
+            </div>
+            <div class="service-content w-full grow">
+              <ul class="task-preview space-y-3 text-gray-700">
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Dusting of ceiling fans & light fixtures</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Removal of cobwebs</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Dusting of blinds, windowsills, & lock ledges</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Dusting of moldings & woodwork</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Dusting of baseboards</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Dusting of lamps & lampshades</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Dusting of pictures & knick-knacks</li>
+              </ul>
+              <div class="full-tasks hidden opacity-0 pt-6 border-t border-brand-gold/20">
+                <ul class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4 text-gray-600 text-sm">
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Dusting of ceiling fans & light fixtures</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Removal of cobwebs</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Dusting of blinds, windowsills, & lock ledges</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Dusting of moldings & woodwork</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Dusting of baseboards</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Dusting of lamps & lampshades</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Dusting of pictures & knick-knacks</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Dusting of furniture</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Cleaning the top of the refrigerator</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Cleaning the outside of appliances</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Cleaning stovetop and drip pans</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Cleaning countertops and backsplashes</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Cleaning all sinks</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Cleaning mirrors</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Cleaning tub/shower and tile</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Cleaning all bathroom counters and fixtures</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Emptying and relining wastebaskets</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Making beds and changing sheets</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Vacuuming stairs</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Vacuuming and/or mopping floors</li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex justify-center w-full pt-6 mt-auto border-t border-brand-gold/10">
+              <span class="learn-more-label text-sm font-bold uppercase tracking-widest text-brand-purple border-b-2 border-brand-gold pb-1 transition-colors hover:text-brand-gold">Learn More</span>
+            </div>
+          </div>
         </div>
 
-        <div class="p-8 rounded-2xl bg-brand-accent/30 border border-brand-gold/10 hover:shadow-md transition-shadow">
-          <div class="flex items-center gap-4 mb-6">
-            <i data-lucide="briefcase" class="text-brand-gold w-10 h-10"></i>
-            <h4 class="font-bold uppercase tracking-widest text-lg">Move-In / Out</h4>
+        <div class="service-row group flex flex-col md:flex-row-reverse bg-brand-accent/30 rounded-3xl overflow-hidden border border-brand-gold/10 cursor-pointer transition-all duration-700 min-h-[500px]">
+          <div class="service-img-col md:w-1/2 h-80 overflow-hidden transition-all duration-700">
+            <img src="/cleaner-two.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Move-In/Out">
           </div>
-          <ul class="space-y-4 text-gray-600 text-sm leading-relaxed">
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Inside cabinet & drawer cleaning</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Inside oven & refrigerator detailing</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Baseboard scrubbing throughout</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Window track & sill cleaning</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Removal of cobwebs & ceiling dust</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Wall spot cleaning where possible</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Closet shelving & floor detailing</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Thorough laundry room sanitization</li>
-          </ul>
+          <div class="service-text-col md:w-1/2 p-12 flex flex-col transition-all duration-700">
+            <div class="flex flex-row items-center gap-4 mb-6">
+              <i data-lucide="briefcase" class="text-brand-gold w-10 h-10"></i>
+              <h4 class="font-bold uppercase tracking-widest text-xl md:text-2xl text-brand-purple">Move-In / Out</h4>
+            </div>
+            <div class="service-content w-full grow">
+              <ul class="task-preview space-y-3 text-gray-700">
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Washing light switch plates</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Vacuuming lower air return vents</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Washing window sills</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Washing baseboards</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Vacuuming carpet edges and crevices</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Special attention to heavy dust build-up</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Special attention to build-up in the kitchen</li>
+              </ul>
+              <div class="full-tasks hidden opacity-0 pt-6 border-t border-brand-gold/20">
+                <ul class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4 text-gray-600 text-sm">
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing light switch plates</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Vacuuming lower air return vents</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing window sills</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing baseboards</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Vacuuming carpet edges and crevices</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Special attention to heavy dust build-up</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Special attention to build-up in the kitchen</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Special attention to build-up in bathrooms</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Inside of oven cleaned</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Interiors of all cabinets and drawers washed</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Electric range pulled out and cleaned behind</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing ceiling fan blades</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing light fixtures in place</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Removal of cobwebs</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Vacuuming blinds</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Vacuuming curtain tops</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing doors and door frames</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing picture frame paneling and trim</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing cabinets from top to bottom</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Interior of refrigerator cleaned</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Refrigerator pulled-out and cleaned behind</li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex justify-center w-full pt-6 mt-auto border-t border-brand-gold/10">
+              <span class="learn-more-label text-sm font-bold uppercase tracking-widest text-brand-purple border-b-2 border-brand-gold pb-1 transition-colors hover:text-brand-gold">Learn More</span>
+            </div>
+          </div>
         </div>
 
-        <div class="p-8 rounded-2xl bg-brand-accent/30 border border-brand-gold/10 shadow-lg ring-1 ring-brand-gold/20">
-          <div class="flex items-center gap-4 mb-6">
-            <i data-lucide="sparkles" class="text-brand-gold w-10 h-10"></i>
-            <h4 class="font-bold uppercase tracking-widest text-lg">The Royal Deep Clean</h4>
+        <div class="service-row group flex flex-col md:flex-row bg-brand-accent/30 rounded-3xl overflow-hidden border border-brand-gold/10 cursor-pointer transition-all duration-700 min-h-[500px]">
+          <div class="service-img-col md:w-1/2 h-80 overflow-hidden transition-all duration-700">
+            <img src="/cleaner-three.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Deep Clean">
           </div>
-          <ul class="space-y-4 text-gray-600 text-sm leading-relaxed">
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Detailed hand-wiping of light fixtures</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Deep grout scrubbing in bathrooms</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Vent cover dusting & sanitizing</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Furniture vacuuming & polishing</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Behind & under light furniture</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Door frame & molding hand-wiping</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Specialty floor treatment</li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Complete home air freshening</li>
-          </ul>
+          <div class="service-text-col md:w-1/2 p-12 flex flex-col transition-all duration-700">
+            <div class="flex flex-row items-center gap-4 mb-6">
+              <i data-lucide="sparkles" class="text-brand-gold w-10 h-10"></i>
+              <h4 class="font-bold uppercase tracking-widest text-xl md:text-2xl text-brand-purple">The Royal Deep Clean</h4>
+            </div>
+            <div class="service-content w-full grow">
+              <ul class="task-preview space-y-3 text-gray-700">
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Washing ceiling fan blades</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Washing light fixtures in place</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Removal of cobwebs</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Vacuuming blinds</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Vacuuming curtain tops</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Washing doors and door frames</li>
+                <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mt-1"></i> Washing picture frame paneling and trim</li>
+              </ul>
+              <div class="full-tasks hidden opacity-0 pt-6 border-t border-brand-gold/20">
+                <ul class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4 text-gray-600 text-sm">
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing ceiling fan blades</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing light fixtures in place</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Removal of cobwebs</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Vacuuming blinds</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Vacuuming curtain tops</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing doors and door frames</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing picture frame paneling and trim</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing cabinets from top to bottom</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing light switch plates</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Vacuuming lower air return vents</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing window sills</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Washing baseboards</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Vacuuming carpet edges and crevices</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Special attention to heavy dust build-up</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Special attention to build-up in the kitchen</li>
+                  <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold mt-0.5"></i> Special attention to build-up in bathrooms</li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex justify-center w-full pt-6 mt-auto border-t border-brand-gold/10">
+              <span class="learn-more-label text-sm font-bold uppercase tracking-widest text-brand-purple border-b-2 border-brand-gold pb-1 transition-colors hover:text-brand-gold">Learn More</span>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section id="reviews" class="py-24 bg-brand-accent reveal">
+  <div class="bg-brand-purple py-10 text-white">
+    <div class="container mx-auto px-6 flex flex-wrap justify-center items-center gap-8 md:gap-12">
+      <span class="text-brand-gold font-bold uppercase tracking-widest text-sm">Serving:</span>
+      <span class="font-serif text-md">Danville</span>
+      <span class="opacity-30 hidden md:block">|</span>
+      <span class="font-serif text-md">Alamo</span>
+      <span class="opacity-30 hidden md:block">|</span>
+      <span class="font-serif text-md">Blackhawk</span>
+      <span class="opacity-30 hidden md:block">|</span>
+      <span class="font-serif text-md">San Ramon</span>
+      <span class="opacity-30 hidden md:block">|</span>
+      <span class="font-serif text-md">Dublin</span>
+      <span class="opacity-30 hidden md:block">|</span>
+      <span class="font-serif text-md">Pleasanton</span>
+      <span class="opacity-30 hidden md:block">|</span>
+      <span class="font-serif text-md">Livermore</span>
+    </div>
+  </div>
+
+  <section id="reviews" class="py-20 bg-brand-accent reveal">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
+      <div class="text-center mb-20">
         <h3 class="text-4xl font-serif italic text-brand-purple mb-4">Client Experiences</h3>
         <div class="flex justify-center items-center gap-4 text-sm font-semibold uppercase tracking-widest text-gray-500">
-          <span class="flex items-center gap-1"><i data-lucide="star" class="fill-brand-gold text-brand-gold w-4 h-4"></i> Google Reviews</span>
+          <span class="flex items-center gap-1"><i data-lucide="star" class="fill-brand-gold text-brand-gold w-4 h-4"></i> Google</span>
           <span>•</span>
-          <span class="flex items-center gap-1"><i data-lucide="star" class="fill-red-600 text-red-600 w-4 h-4"></i> Yelp Reviews</span>
+          <span class="flex items-center gap-1"><i data-lucide="star" class="fill-red-600 text-red-600 w-4 h-4"></i> Yelp</span>
         </div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-full hover:shadow-md transition-shadow">
-          <div>
-            <p class="text-gray-600 italic mb-6">"The best service anyone can ask for. Majestic Maids are efficient and
-              moderately priced. I've tried other services and Majestic Maids is the best of them all. I love this company
-              and would recommend them to anyone. Thank you Majestic Maids"</p>
-          </div>
-          <div class="flex items-center justify-between border-t border-gray-50 pt-4">
-            <span class="font-bold text-brand-purple text-sm">— Mathew S.</span>
-            <div class="flex text-brand-gold">
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-            </div>
-            <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" class="w-5 h-5 opacity-50" alt="Google">
-          </div>
-        </div>
+      <div class="relative max-w-7xl mx-auto px-16">
+        <button id="revPrev" class="absolute left-0 top-1/2 -translate-y-1/2 p-2 text-brand-purple hover:text-brand-gold transition-colors z-10">
+          <i data-lucide="chevron-left" class="w-12 h-12"></i>
+        </button>
+        <button id="revNext" class="absolute right-0 top-1/2 -translate-y-1/2 p-2 text-brand-purple hover:text-brand-gold transition-colors z-10">
+          <i data-lucide="chevron-right" class="w-12 h-12"></i>
+        </button>
 
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-full hover:shadow-md transition-shadow">
-          <div>
-            <p class="text-gray-600 italic mb-6">"Maricruz and company have been cleaning my house for the past several years,
-              and I’ve always been happy with their cleaning. They are on time, and do a thorough job cleaning. Highly recommend
-              them for your home."</p>
-          </div>
-          <div class="flex items-center justify-between border-t border-gray-50 pt-4">
-          <span class="font-bold text-brand-purple text-sm">— Kaustubh G.</span>
-            <div class="flex text-brand-gold">
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-            </div>
-            <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" class="w-5 h-5 opacity-50" alt="Google">
-          </div>
-        </div>
+        <div class="overflow-hidden">
+          <div id="review-track" class="flex transition-transform duration-500 ease-out gap-8 items-stretch py-4">
+            
+            <a href="https://share.google/plxm8Dr4nHJ3IvXrp" target="_blank" class="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.35rem)] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300">
+              <div class="mb-4">
+                <img src="/review-one.png" class="w-16 h-16 rounded-full border-2 border-brand-gold p-0.5 object-cover" alt="Mathew S.">
+              </div>
+              <p class="text-gray-600 italic mb-6 line-clamp-3">"The best service anyone can ask for. Majestic Maids are efficient and moderately priced."</p>
+              <div class="flex items-center justify-between w-full border-t border-gray-50 pt-4 mt-auto">
+                <span class="font-bold text-brand-purple text-sm">— Mathew S.</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" class="w-5 h-5 opacity-50" alt="Google">
+              </div>
+            </a>
 
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between h-full hover:shadow-md transition-shadow">
-          <div>
-            <p class="text-gray-600 italic mb-6">"Really organized staff, who has clearly been trained professionally...wow....this company is independently owned, but
-              managed in very professional way....cool that they offered me an option for a free cleaning if I get a couple services or so...hmmm...not bad!"</p>
-          </div>
-          <div class="flex items-center justify-between border-t border-gray-50 pt-4">
-            <span class="font-bold text-brand-purple text-sm">— Rene V.</span>
-            <div class="flex text-brand-gold">
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-              <i data-lucide="star" class="fill-brand-gold w-4 h-4"></i>
-            </div>
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174882.png" class="w-5 h-5 opacity-50" alt="Yelp">
+            <a href="https://www.yelp.com/biz/majestic-maids-danville?hrid=lhPKk3eE-aPFBAcRssooog&utm_campaign=www_review_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" class="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.35rem)] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300">
+              <div class="mb-4">
+                <img src="/review-two.jpg" class="w-16 h-16 rounded-full border-2 border-brand-gold p-0.5 object-cover" alt="Julia B.">
+              </div>
+              <p class="text-gray-600 italic mb-6 line-clamp-3">"They did an excellent job. They got to my home right on time and did a very thorough deep clean. I highly recommend them."</p>
+              <div class="flex items-center justify-between w-full border-t border-gray-50 pt-4 mt-auto">
+                <span class="font-bold text-brand-purple text-sm">— Julia B.</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174882.png" class="w-5 h-5 opacity-50" alt="Yelp">
+              </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/LWK58whrZuwZCkfF9" target="_blank" class="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.35rem)] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300">
+              <div class="mb-4">
+                <img src="/review-three.png" class="w-16 h-16 rounded-full border-2 border-brand-gold p-0.5 object-cover" alt="Kaustubh G.">
+              </div>
+              <p class="text-gray-600 italic mb-6 line-clamp-3">"Maricruz and company have been cleaning my house for years. They are on time and do a thorough job."</p>
+              <div class="flex items-center justify-between w-full border-t border-gray-50 pt-4 mt-auto">
+                <span class="font-bold text-brand-purple text-sm">— Kaustubh G.</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" class="w-5 h-5 opacity-50" alt="Google">
+              </div>
+            </a>
+
+            <a href="https://www.yelp.com/biz/majestic-maids-danville?hrid=JkYT_GlC_J6SKOfXI_sFyQ&utm_campaign=www_review_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" class="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.35rem)] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300">
+              <div class="mb-4">
+                <img src="/review-four.jpg" class="w-16 h-16 rounded-full border-2 border-brand-gold p-0.5 object-cover" alt="Rene V.">
+              </div>
+              <p class="text-gray-600 italic mb-6 line-clamp-3">"Really organized staff, trained professionally. Independently owned but very professional."</p>
+              <div class="flex items-center justify-between w-full border-t border-gray-50 pt-4 mt-auto">
+                <span class="font-bold text-brand-purple text-sm">— Rene V.</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174882.png" class="w-5 h-5 opacity-50" alt="Yelp">
+              </div>
+            </a>
+            
+            <!-- here -->
+            <a href="https://share.google/Lo2rX4eYdYKBZJcXh" target="_blank" class="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.35rem)] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300">
+              <div class="mb-4">
+                <img src="/review-five.png" class="w-16 h-16 rounded-full border-2 border-brand-gold p-0.5 object-cover" alt="Morgan W.">
+              </div>
+              <p class="text-gray-600 italic mb-6 line-clamp-3">"I’ve been using Majestic Maids since 2020, and I can’t recommend them enough! Maricruz, the owner, is amazing—so professional, responsive, and committed to doing a great job every time. She used to clean my home in Danville and now even travels to Saratoga to take care of our new home. Her team is thorough, efficient, and consistent. On the rare occasion that something needs extra attention, it gets handled right away—no questions asked. It’s incredibly hard to find a reliable cleaning company these days, but Majestic Maids has been dependable from day one. Highly recommend!"</p>
+              <div class="flex items-center justify-between w-full border-t border-gray-50 pt-4 mt-auto">
+                <span class="font-bold text-brand-purple text-sm">— Morgan W.</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" class="w-5 h-5 opacity-50" alt="Google">
+              </div>
+            </a>
+
+            <a href="https://www.yelp.com/biz/majestic-maids-danville?hrid=_4VoudbKZ1b6RctX_0gQpw&utm_campaign=www_review_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" class="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.35rem)] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300">
+              <div class="mb-4">
+                <img src="/review-six.jpg" class="w-16 h-16 rounded-full border-2 border-brand-gold p-0.5 object-cover" alt="Cindy L.">
+              </div>
+              <p class="text-gray-600 italic mb-6">"Maricruz is such a wonderful person! She did such a thorough job on such short notice. We appreciate her and her crew a lot!"</p>
+              <div class="flex items-center justify-between w-full border-t border-gray-50 pt-4 mt-auto">
+                <span class="font-bold text-brand-purple text-sm">— Cindy L.</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174882.png" class="w-5 h-5 opacity-50" alt="Yelp">
+              </div>
+            </a>
+            
           </div>
         </div>
-      </div>
-      
-      <div class="mt-12 text-center">
-        <a href="https://www.google.com/search?sca_esv=4c4e6101c633db36&sxsrf=ANbL-n6fEaAWq2QGksjspJQUcEc84djUPg:1772488206170&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOcyk78AM2KMZzKhS2Zqwiamg3CHW_SxofRW5p-xOJCkn-USJP0_nn39xhkXGQr0tSm2ZDJZ65m3Gs34-F1_Y9r56vRBy&q=Majestic+Maids+Reviews&sa=X&ved=2ahUKEwjj0paPmYKTAxXdEzQIHSlcAK8Q0bkNegQIQhAF&biw=1492&bih=803&dpr=2" target="_blank" class="inline-flex items-center gap-2 text-brand-purple font-bold border-b-2 border-brand-gold hover:text-brand-gold transition-colors pb-1">
-          Read All Five-Star Reviews
-        </a>
       </div>
     </div>
   </section>
 
-<section id="charity" class="py-10 bg-white border-y border-brand-gold/20 reveal">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-10">
-      <h3 class="text-4xl font-serif italic text-brand-purple">What is Cleaning For A Reason?</h3>
-    </div>
-    <div class="flex flex-col md:flex-row items-center justify-center gap-10 mb-16">
-      <img src="/cleaning-for-reason.png" alt="Cleaning For A Reason" class="h-44 opacity-90">
-      <p class="text-gray-600 mb-6 leading-relaxed">
-        Cleaning for a Reason is a 501(c)(3) nonprofit organization that offers free home cleaning to cancer patients in the
-        United States and Canada. Our goal is to remove the burden of cleaning and allow those recovering from surgery, in
-        active treatment, or in hospice to focus on their health and spending valuable time with loved ones.
-      </p>
-    </div>
+  <section id="charity" class="py-20 bg-white border-y border-brand-gold/20 reveal">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-10">
+        <h3 class="text-4xl font-serif text-center mb-20 text-brand-purple">Proud Partner of Cleaning For A Reason</h3>
+      </div>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-10 mb-16">
+        <img src="/cleaning-for-reason.png" alt="Cleaning For A Reason" class="h-44 opacity-90">
+        <p class="text-gray-600 mb-6 leading-relaxed max-w-2xl">
+          Cleaning for a Reason is a 501(c)(3) nonprofit organization that offers free home cleaning to cancer patients. Their goal is to remove the burden of cleaning and allow those focusing on their health to spend valuable time with loved ones.
+        </p>
+      </div>
 
-    <div class="bg-brand-accent rounded-3xl p-12 max-w-6xl mx-auto shadow-sm">
-      <h4 class="text-center font-bold text-lg mb-12 text-black">Since its founding in 2006, Cleaning for a Reason has:</h4>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <div class="flex flex-col items-center">
-          <i data-lucide="heart" class="w-16 h-16 text-brand-purple fill-brand-purple mb-4"></i>
-          <span class="text-4xl font-bold text-gray-800 mb-2">65,082</span>
-          <p class="text-lg font-medium text-gray-600">Patients Served</p>
-        </div>
-
-        <div class="flex flex-col items-center border-y md:border-y-0 md:border-x border-gray-200 py-8 md:py-0">
-          <i data-lucide="piggy-bank" class="w-16 h-16 text-brand-purple fill-brand-purple mb-4"></i>
-          <span class="text-4xl font-bold text-gray-800 mb-2">$23,188,281</span>
-          <p class="text-lg font-medium text-gray-600">Donated Cleanings</p>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <i data-lucide="users" class="w-16 h-16 text-brand-purple fill-brand-purple mb-4"></i>
-          <span class="text-4xl font-bold text-gray-800 mb-2">1,400</span>
-          <p class="text-lg font-medium text-gray-600">Partnered Cleaning Companies</p>
+      <div class="bg-brand-accent rounded-3xl p-12 max-w-6xl mx-auto shadow-sm">
+        <h4 class="text-center font-bold text-lg mb-12 text-black uppercase tracking-wider">Impact Since 2006:</h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="flex flex-col items-center">
+            <i data-lucide="heart" class="w-16 h-16 text-brand-purple fill-brand-purple mb-4"></i>
+            <span class="text-4xl font-bold text-gray-800 mb-2">65,082</span>
+            <p class="text-lg font-medium text-gray-600">Patients Served</p>
+          </div>
+          <div class="flex flex-col items-center border-y md:border-y-0 md:border-x border-gray-200 py-8 md:py-0">
+            <i data-lucide="piggy-bank" class="w-16 h-16 text-brand-purple fill-brand-purple mb-4"></i>
+            <span class="text-4xl font-bold text-gray-800 mb-2">$23,188,281</span>
+            <p class="text-lg font-medium text-gray-600">Donated Cleanings</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <i data-lucide="users" class="w-16 h-16 text-brand-purple fill-brand-purple mb-4"></i>
+            <span class="text-4xl font-bold text-gray-800 mb-2">1,400</span>
+            <p class="text-lg font-medium text-gray-600">Partnered Companies</p>
+          </div>
         </div>
       </div>
     </div>
-    </div>
-</section>
+  </section>
 
   <section id="about" class="py-20 bg-white reveal">
     <div class="container mx-auto px-6 flex flex-col md:flex-row gap-16 items-center">
@@ -220,7 +350,6 @@
           <img src="/family-room.avif" class="w-full shrink-0 object-cover aspect-[4/3]" alt="Family Room">
           <img src="/bathroom-two.avif" class="w-full shrink-0 object-cover aspect-[4/3]" alt="Bathroom2">
         </div>
-
         <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/60 p-2 rounded-full transition opacity-0 group-hover:opacity-100"><i data-lucide="chevron-left"></i></button>
         <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/60 p-2 rounded-full transition opacity-0 group-hover:opacity-100"><i data-lucide="chevron-right"></i></button>
       </div>
@@ -229,9 +358,7 @@
         <p class="text-gray-600 mb-6 leading-relaxed">We are a dedicated team of professionals committed to the highest levels of integrity and excellence. For over a decade, we have served the Danville area with a focus on trust and detail.</p>
         <h3 class="text-3xl font-serif mb-6">Our Mission</h3>
         <p class="text-gray-600 mb-6 leading-relaxed">
-          Majestic Maids Inc. is committed to delivering exceptional, high-quality residential cleaning
-          services with meticulous attention to detail. We strive to create clean, peaceful, and beautifully
-          maintained homes while providing reliable, professional service our clients can trust.
+          Majestic Maids Inc. is committed to delivering exceptional, high-quality residential cleaning services.
         </p>
       </div>
     </div>
@@ -243,7 +370,7 @@
         <div class="md:w-1/3">
           <h3 class="text-4xl font-serif mb-8">Get in Touch</h3>
           <div class="space-y-6 text-gray-700">
-            <p>Ready to experience the Majestic Maids difference in Danville and surrounding areas?</p>
+            <p>Ready to experience the Majestic Maids difference?</p>
             <div class="flex items-center gap-4"><i data-lucide="phone" class="text-brand-gold"></i><span>(925) 453-9495</span></div>
             <div class="flex items-center gap-4"><i data-lucide="mail" class="text-brand-gold"></i><span>hellomajesticmaids@gmail.com</span></div>
           </div>
@@ -262,10 +389,8 @@
 
   <footer class="bg-brand-purple text-white py-6">
     <div class="container mx-auto px-6 text-center">
-      <a href="#" class="inline-block mb-6">
-        <img id="footer-logo" src="/logo.png" class="h-16 w-auto mx-auto brightness-110" alt="Majestic Maids Logo">
-      </a>
-      <p class="text-sm opacity-70">© 2026 Majestic Maids Services. Serving Danville and surrounding areas.</p>
+      <img id="footer-logo" src="/logo.png" class="h-16 w-auto mx-auto brightness-110 mb-4" alt="Majestic Maids">
+      <p class="text-sm opacity-70">© 2026 Majestic Maids Services.</p>
     </div>
   </footer>
 

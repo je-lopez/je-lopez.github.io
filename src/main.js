@@ -1,121 +1,157 @@
 import './style.css'
 
 document.addEventListener("DOMContentLoaded", () => {
-  lucide.createIcons();
+  if (window.lucide) {
+    lucide.createIcons();
+  }
 
-  // --- Navbar Scroll Logic ---
+  // --- Existing Elements ---
   const navbar = document.getElementById('navbar');
-  const logo = document.getElementById('nav-logo');
-  const sections = document.querySelectorAll('section, header');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLogo = document.getElementById('nav-logo');
+  const servicesGrid = document.getElementById('services-grid');
+  const serviceRows = document.querySelectorAll('.service-row');
+  const anchor = document.getElementById('services-anchor');
 
+  // --- Carousel Elements ---
+  const track = document.getElementById('review-track');
+  const nextButton = document.getElementById('revNext');
+  const prevButton = document.getElementById('revPrev');
+  let currentIndex = 0;
+
+  // --- Carousel Logic ---
+  if (track && nextButton && prevButton) {
+    const updateSlider = () => {
+      const cards = track.children;
+      if (cards.length === 0) return;
+
+      const cardWidth = cards[0].offsetWidth;
+      // Get the gap value from the computed style (handles 'gap-8')
+      const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
+      
+      // Calculate move distance: (Width of one card + the gap) * current index
+      const moveDistance = (cardWidth + gap) * currentIndex;
+      track.style.transform = `translateX(-${moveDistance}px)`;
+    };
+
+    const getVisibleCards = () => {
+      if (window.innerWidth >= 1024) return 3; // lg
+      if (window.innerWidth >= 768) return 2;  // md
+      return 1;                                // sm
+    };
+
+    nextButton.addEventListener('click', () => {
+      const totalCards = track.children.length;
+      const visibleCards = getVisibleCards();
+      
+      if (currentIndex < totalCards - visibleCards) {
+        currentIndex++;
+      } else {
+        currentIndex = 0; // Loop back to start
+      }
+      updateSlider();
+    });
+
+    prevButton.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        const totalCards = track.children.length;
+        currentIndex = totalCards - getVisibleCards(); // Loop to end
+      }
+      updateSlider();
+    });
+
+    // Recalculate on resize to prevent the slider from getting "stuck" between cards
+    window.addEventListener('resize', updateSlider);
+  }
+
+  // --- Existing Scroll Logic ---
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-      navbar.classList.add('nav-scrolled');
-      navbar.classList.remove('nav-transparent', 'text-white');
-      navbar.classList.add('text-black');
-      logo.classList.add('logo-small');
-      logo.classList.remove('logo-large');
+      navbar?.classList.add('nav-scrolled');
+      navLogo?.classList.add('logo-small');
+      navLogo?.classList.remove('logo-large');
     } else {
-      navbar.classList.add('nav-transparent', 'text-white');
-      navbar.classList.remove('nav-scrolled', 'text-black');
-      logo.classList.add('logo-large');
-      logo.classList.remove('logo-small');
+      navbar?.classList.remove('nav-scrolled');
+      navLogo?.classList.add('logo-large');
+      navLogo?.classList.remove('logo-small');
     }
-
-    let current = "";
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      if (window.pageYOffset >= sectionTop - 150) {
-        current = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach((link) => {
-      link.classList.remove("nav-link-active");
-      if (link.getAttribute("href").includes(current) && current !== "") {
-        link.classList.add("nav-link-active");
-      }
-    });
   });
 
-  // --- Service Expansion Logic ---
-  document.querySelectorAll('.service-row').forEach(row => {
+  // --- Existing Service Grid Logic ---
+  serviceRows.forEach(row => {
     row.addEventListener('click', () => {
-      const isExpanded = row.classList.toggle('expanded');
-      const label = row.querySelector('.learn-more-label');
-      label.textContent = isExpanded ? 'Show Less' : 'Learn More';
-      
-      if(isExpanded) {
-        // Wait slightly for transition to start, then scroll with offset
-        setTimeout(() => {
-          const yOffset = -120; // Keeps the heading/nav visible
-          const y = row.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: 'smooth' });
-        }, 50);
+      if (row.classList.contains('expanded')) {
+        collapseAll();
+      } 
+      else {
+        expandCard(row);
       }
+    });
+
+    const closeBtn = row.querySelector('.close-service');
+    closeBtn?.addEventListener('click', (e) => {
+      e.stopPropagation(); 
+      collapseAll();
     });
   });
 
-  // --- Review Carousel Logic ---
-  const track = document.getElementById('review-track');
-  const revPrev = document.getElementById('revPrev');
-  const revNext = document.getElementById('revNext');
-  let revIndex = 0;
+  function expandCard(row) {
+    collapseAll();
+    row.classList.add('expanded');
+    servicesGrid?.classList.add('item-expanded');
+    
+    const label = row.querySelector('.learn-more-label');
+    if (label) label.textContent = 'Show Less';
 
-  function updateReviewCarousel() {
-    if (!track) return;
-    const gap = 32;
-    const cards = track.querySelectorAll('a, div');
-    if (cards.length === 0) return;
-    const cardWidth = cards[0].offsetWidth;
-    track.style.transform = `translateX(-${revIndex * (cardWidth + gap)}px)`;
-  }
-
-  if (revNext && revPrev) {
-    revNext.addEventListener('click', () => {
-      const cardsInView = window.innerWidth >= 1024 ? 3 : (window.innerWidth >= 768 ? 2 : 1);
-      const totalCards = track.children.length;
-      revIndex = (revIndex >= totalCards - cardsInView) ? 0 : revIndex + 1;
-      updateReviewCarousel();
-    });
-
-    revPrev.addEventListener('click', () => {
-      const cardsInView = window.innerWidth >= 1024 ? 3 : (window.innerWidth >= 768 ? 2 : 1);
-      const totalCards = track.children.length;
-      revIndex = (revIndex <= 0) ? totalCards - cardsInView : revIndex - 1;
-      updateReviewCarousel();
-    });
-
-    window.addEventListener('resize', updateReviewCarousel);
-  }
-
-  // --- About Carousel ---
-  const aboutCarousel = document.getElementById('carousel');
-  const aboutPrev = document.getElementById('prevBtn');
-  const aboutNext = document.getElementById('nextBtn');
-  let aboutIdx = 0;
-
-  if(aboutNext && aboutPrev) {
-    aboutNext.addEventListener('click', () => {
-      aboutIdx = (aboutIdx + 1) % 5;
-      aboutCarousel.style.transform = `translateX(-${aboutIdx * 100}%)`;
-    });
-    aboutPrev.addEventListener('click', () => {
-      aboutIdx = (aboutIdx - 1 + 5) % 5;
-      aboutCarousel.style.transform = `translateX(-${aboutIdx * 100}%)`;
-    });
-  }
-
-  // --- Reveal Observer ---
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-        observer.unobserve(entry.target);
+    setTimeout(() => {
+      const yOffset = -100; 
+      if (anchor) {
+        const targetPos = anchor.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: targetPos, behavior: 'smooth' });
       }
-    });
-  }, { threshold: 0.1 });
+    }, 150);
+  }
 
-  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  function collapseAll() {
+    serviceRows.forEach(r => {
+      r.classList.remove('expanded');
+      const label = r.querySelector('.learn-more-label');
+      if (label) label.textContent = 'Learn More';
+    });
+    servicesGrid?.classList.remove('item-expanded');
+  }
+
+  // --- Contact Form Logic ---
+  const contactForm = document.querySelector('#contact form');
+
+  contactForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const button = contactForm.querySelector('button');
+    const originalText = button.textContent;
+    button.textContent = 'Sending...';
+    button.disabled = true;
+
+    const formData = new FormData(contactForm);
+    
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        button.textContent = 'Message Sent!';
+        button.classList.replace('bg-brand-purple', 'bg-green-600');
+        contactForm.reset();
+      } else {
+        throw new Error();
+      }
+    } catch (err) {
+      button.textContent = 'Error! Try again.';
+      button.disabled = false;
+    }
+  });
 });
